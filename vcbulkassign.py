@@ -75,8 +75,7 @@ def check_for_api_user(userdata):
     return apiuser
 
 def check_for_teams(userdata):
-    teams = userdata.get("teams")
-    if teams == None:
+    if (teams := userdata.get("teams")) == None:
         return 0
     return len(teams) 
 
